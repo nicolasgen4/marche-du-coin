@@ -1,0 +1,1 @@
+<?php /**PATH C:\xampp\htdocs\marche_du_coin\resources\views/partials/_search.blade.php ENDPATH**/ ?>

@@ -1,0 +1,39 @@
+/*STRUCTURE GENERALE*/
+.wrapper {
+    max-width: var(--largeur-wrapper);
+    margin: auto;
+}
+
+/*CLASSES FLEXBOX*/
+.column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.column-btw-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-btw {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row-wrap-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}

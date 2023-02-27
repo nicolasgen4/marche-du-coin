@@ -1,0 +1,53 @@
+:root {
+    --couleur-primaire: #FDFDFD;
+    --couleur-secondaire: #2D2D2D;
+    --ombre: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    --largeur-wrapper: 1240px;
+}
+
+/*STYLES GLOBAUX*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--couleur-primaire);
+    color: var(--couleur-secondaire);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+figure,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+a {
+    text-decoration: none;
+    color: var(--couleur-secondaire);
+}
+
+address {
+    font-style: normal;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-style: italic;
+}

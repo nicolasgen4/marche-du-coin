@@ -3,25 +3,25 @@
 @section('content')
 @include('partials._search')
 
-<section>
+<article class="article">
     <img src="{{asset('images')}}/{{$vente->image}}" alt="{{$vente->titre}}">
     <h2>{{$vente->titre}}</h2>
-    <section>
+    <article>
         <h3>{{$vente->vendeur}}</h3>
         <address>{{$vente->localisation}}</address>
         <x-vente-etiquettes :etiquettesSpv="$vente->etiquettes"/>
-    </section>
-    <section>
+    </article>
+    <article>
         <h4>Du {{$vente->debut_vente}} à {{$vente->fin_vente}}</h4>
         <p>{{$vente->description}}</p>
-    </section>
-    <section>
+    </article>
+    <article>
         <h5>Contacts</h5>
         <ul>
             <li>{{$vente->telephone}}</li>
             <li>{{$vente->email}}</li>
             <li>{{$vente->site_web}}</li>
         </ul>
-    </section>
-</section>
+    </article>
+</article>
 @endsection

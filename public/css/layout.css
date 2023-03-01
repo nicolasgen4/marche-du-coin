@@ -1,6 +1,6 @@
 /*STRUCTURE GENERALE*/
 .wrapper {
-    max-width: var(--largeur-wrapper);
+    max-width: var(--main-wrapper);
     margin: auto;
 }
 

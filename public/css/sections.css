@@ -5,23 +5,12 @@ body>#header-nav {
     height: 60vh;
     background: 50% 20% / cover no-repeat url(/images/header_background.webp);
     background-attachment: fixed;
-    color: var(--couleur-primaire);
 }
 
 #header-nav>.main-menu {
     width: 100%;
-    background-color: var(--couleur-secondaire);
-    opacity: .94;
+    background-color: var(--couleur-navigation);
     padding: 0.4rem 0;
-}
-
-.main-menu>ul>li>a {
-    display: inline-block;
-    color: green;
-    padding: 0.6rem;
-    margin: 0.4rem 0;
-    border-radius: 1.2rem;
-    box-shadow: var(--ombre);
 }
 
 #header-nav>.hero {
@@ -31,29 +20,14 @@ body>#header-nav {
     transform: translate(-50%, -50%);
     max-width: 40%;
     text-align: center;
-    color: var(--couleur-primaire);
-    background-color: var(--couleur-secondaire);
-    opacity: .94;
+    background-color: var(--couleur-navigation);
     border-radius: 1.2rem;
     gap: 1rem;
     padding: 2rem;
 }
 
-/*Logo*/
-#header-nav .logo>figure>figcaption {
-    color: green;
-}
-
-#header-nav .logo>figure>svg {
-    fill: green;
-}
-
-/*CARTES VENTES*/
-main>.items {
-    gap: 2rem;
-}
-
-main>.items>.item {
-    width: 360px;
-    height: 560px;
+/*FOOTER*/
+footer {
+    width: 100%;
+    background-color: var(--couleur-navigation);
 }

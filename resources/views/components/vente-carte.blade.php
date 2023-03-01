@@ -1,6 +1,5 @@
 @props(['vente'])
 
-
 <section class="item column-btw-center">
     <img src="images/{{$vente->image}}" alt="{{$vente->titre}}">
     <h2>{{$vente->titre}}</h2>
@@ -10,5 +9,5 @@
         <x-vente-etiquettes :etiquettesSpv="$vente->etiquettes" />
         <p>{{mb_strimwidth(ucfirst($vente->description), 0, 160, '...')}}</p>
     </section>
-    <a href="/ventes/{{$vente->id}}">Découvrir</a>
+    <a href="/ventes/{{$vente->id}}" class="bouton">Découvrir</a>
 </section>

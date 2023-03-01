@@ -1,0 +1,27 @@
+/*BOUTONS*/
+.bouton {
+    display: inline-block;
+    padding: 0.6rem;
+    margin: 0.4rem 0;
+    background-color: var(--couleur-navigation);
+    border-radius: 0.4rem;
+    box-shadow: var(--ombre);
+}
+
+/*CARTES VENTES*/
+main>.items {
+    gap: 2rem;
+}
+
+main>.items>.item {
+    width: 360px;
+    height: 560px;
+    box-shadow: var(--ombre);
+    padding: 1.4rem;
+}
+
+/*VENTE ARTICLE*/
+main>.article {
+    max-width: var(--section-wrapper);
+    margin: auto;
+}

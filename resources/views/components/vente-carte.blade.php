@@ -1,7 +1,7 @@
 @props(['vente'])
 
 <section class="item column-btw-center">
-    <img src="images/{{$vente->image}}" alt="{{$vente->titre}}">
+    <img src="images/{{$vente->image}}" alt="{{$vente->titre}}" loading="lazy">
     <h2>{{$vente->titre}}</h2>
     <section>
         <h3>{{$vente->debut_vente}}</h3>

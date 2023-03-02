@@ -6,6 +6,8 @@
     --ombre: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     --main-wrapper: 1280px;
     --section-wrapper: 800px;
+    --police-texte: 'Poppins', Arial, Helvetica, sans-serif;
+    --police-titre : 'Shantell Sans', 'Times New Roman', Times, serif;
 }
 
 /*STYLES GLOBAUX*/
@@ -17,6 +19,7 @@ body {
     box-sizing: border-box;
     background-color: var(--couleur-primaire);
     color: var(--couleur-secondaire);
+    font-family: var(--police-texte);
 }
 
 h1,
@@ -27,8 +30,20 @@ h5,
 ul,
 figure,
 p {
+    font-weight: 400;
+    font-size: 1rem;
     margin: 0;
     padding: 0;
+}
+
+h1 {
+    font-family: var(--police-titre);
+    font-size: 2rem;
+}
+
+h2 {
+    font-family: var(--police-titre);
+    font-size: 1.6rem;
 }
 
 li {

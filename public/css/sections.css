@@ -33,6 +33,10 @@ body>#header-nav {
     box-shadow: var(--ombre);
 }
 
+#header-nav>.main-menu li:nth-child(1) {
+    font-weight: 700;
+}
+
 /*FOOTER*/
 footer {
     width: 100%;
@@ -41,6 +45,6 @@ footer {
 }
 
 footer>.footer-menu,
-footer>.footer-menu>nav>ul {
+footer>.footer-menu>ul {
     gap: 1.6rem;
 }

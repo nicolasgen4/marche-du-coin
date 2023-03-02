@@ -28,10 +28,10 @@
                     <figcaption>Le marché du coin</figcaption>
                 </figure>
             </a>
-            <ul class="row-center">
+            <ul class="menu row-center">
                 <li>Vous êtes un producteur du Rouillacais ?</li>
-                <li><a href="/" class="bouton">Je vends mes produits</a></li>
-                <li><a href="/" class="bouton">Je gère mes annonces</a></li>
+                <li><a href="/" class="bouton">Vendre mes produits</a></li>
+                <li><a href="/" class="bouton">Gérer mes annonces</a></li>
             </ul>
         </nav>
         <section class="hero column-center">
@@ -50,15 +50,12 @@
         @yield('content')
     </main>
     <footer>
-        <section class="footer-menu wrapper row-center">
-            <h5>Le marché du coin</h5>
-            <nav class="row-center">
-                <ul class="row-center">
-                    <li><a href="/">Mentions Légales</a></li>
-                    <li><a href="/">Politique de confidentialité</a></li>
-                </ul>
-            </nav>
-        </section>
+        <nav class="footer-menu wrapper row-center">
+            <ul class="row-center">
+                <li><a href="/">Mentions Légales</a></li>
+                <li><a href="/">Politique de confidentialité</a></li>
+            </ul>
+        </nav>
     </footer>
 
 </body>

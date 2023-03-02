@@ -19,6 +19,7 @@
     padding: 0.6rem;
     margin: 0.4rem 0;
     font-weight: 700;
+    color: var(--couleur-secondaire);
     background-color: var(--couleur-cta);
     border: 2px solid var(--couleur-secondaire);
     border-radius: 0.4rem;

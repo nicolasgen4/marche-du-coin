@@ -4,8 +4,8 @@
 $etiquettes = explode(',', $etiquettesSpv);
 @endphp
 
-<ul>
+<ul class="tags row">
     @foreach ($etiquettes as $etiquette)
-    <li><a href="/?tag={{$etiquette}}">{{$etiquette}}</a></li>
+    <li><a href="/?tag={{$etiquette}}" class="tag">{{ucfirst($etiquette)}}</a></li>
     @endforeach
 </ul>

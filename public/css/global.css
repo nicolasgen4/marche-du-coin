@@ -1,7 +1,8 @@
 :root {
-    --couleur-primaire: #FDFDFD;
+    --couleur-primaire: #E5D9D0;
     --couleur-secondaire: #2D2D2D;
     --couleur-navigation: rgba(192, 160, 138, 0.9);
+    --couleur-articles: #EFEFEF;
     --couleur-cta : rgba(124, 161, 41, 0.9);
     --ombre: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     --main-wrapper: 1280px;
@@ -43,7 +44,7 @@ h1 {
 
 h2 {
     font-family: var(--police-titre);
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
 li {

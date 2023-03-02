@@ -18,6 +18,7 @@
     display: inline-block;
     padding: 0.6rem;
     margin: 0.4rem 0;
+    font-weight: 700;
     background-color: var(--couleur-cta);
     border: 2px solid var(--couleur-secondaire);
     border-radius: 0.4rem;
@@ -33,10 +34,19 @@ main>.items {
 
 main>.items>.item {
     width: 360px;
-    min-height: 560px;
+    min-height: 660px;
     gap: 1.6rem;
+    background-color: var(--couleur-articles);
     box-shadow: var(--ombre);
     padding: 1.4rem;
+}
+
+.informations {
+    gap: 1rem;
+}
+
+.information {
+    font-weight: 700;
 }
 
 /*VENTE ARTICLE*/
@@ -44,10 +54,25 @@ main>.article {
     max-width: var(--section-wrapper);
     margin: 3.2rem auto;
     gap: 2rem;
+    background-color: var(--couleur-articles);
     padding: 2rem;
     box-shadow: var(--ombre);
 }
 
-main>.article>img {
+main>.article>img,
+main>.article>h2 {
     align-self: center;
+}
+
+/*TAGS*/
+.tags {
+    gap: 0.8rem;
+}
+
+.tag {
+    display: inline-block;
+    border: 2px solid var(--couleur-cta);
+    font-weight: 700;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
 }

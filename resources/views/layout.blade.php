@@ -40,7 +40,7 @@
                 ipsam iste.</p>
             <div>
                 <input type="search" name="search" id="search">
-                <button>Rechercher !</button>
+                <button class="bouton">Rechercher !</button>
             </div>
         </section>
     </header>
@@ -49,7 +49,7 @@
         @yield('content')
     </main>
     <footer>
-        <section class="wrapper row-center">
+        <section class="footer-menu wrapper row-center">
             <h5>Le marché du coin</h5>
             <nav class="row-center">
                 <ul class="row-center">

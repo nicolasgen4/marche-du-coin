@@ -5,12 +5,18 @@ body>#header-nav {
     height: 60vh;
     background: 50% 20% / cover no-repeat url(/images/header_background.webp);
     background-attachment: fixed;
+    box-shadow: var(--ombre);
 }
 
 #header-nav>.main-menu {
     width: 100%;
     background-color: var(--couleur-navigation);
     padding: 0.4rem 0;
+}
+
+#header-nav>.main-menu>ul {
+    gap: 1.4rem;
+    margin-right: 1.2rem;
 }
 
 #header-nav>.hero {
@@ -24,10 +30,17 @@ body>#header-nav {
     border-radius: 1.2rem;
     gap: 1rem;
     padding: 2rem;
+    box-shadow: var(--ombre);
 }
 
 /*FOOTER*/
 footer {
     width: 100%;
     background-color: var(--couleur-navigation);
+    padding: 1.2rem 0;
+}
+
+footer>.footer-menu,
+footer>.footer-menu>nav>ul {
+    gap: 1.6rem;
 }

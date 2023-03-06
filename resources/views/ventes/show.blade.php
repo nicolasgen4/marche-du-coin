@@ -1,6 +1,5 @@
-@extends('layout')
+<x-layout>
 
-@section('content')
 @include('partials._search')
 
 <article class="article column-btw">
@@ -24,4 +23,5 @@
         </ul>
     </article>
 </article>
-@endsection
+
+</x-layout>

@@ -1,8 +1,5 @@
 <x-layout>
 
-@include('partials._hero')
-@include('partials._search')
-
 @unless (count($ventes) == 0)
 
 <div class="items row-wrap-center">

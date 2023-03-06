@@ -1,7 +1,5 @@
 <x-layout>
 
-@include('partials._search')
-
 <article class="article column-btw">
     <img src="{{asset('images')}}/{{$vente->image}}" alt="{{$vente->titre}}">
     <h2>{{$vente->titre}}</h2>

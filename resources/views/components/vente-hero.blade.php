@@ -6,9 +6,9 @@
         Et, optio! Debitis praesentium doloribus, earum incidunt porro labore veniam exercitationem a quos rem,
         ipsam iste.</p>
     <div>
-        <form action="">
-            <input type="search" name="search" id="search">
-            <button class="bouton">Rechercher !</button>
+        <form action="/">
+            <input type="text" name="search" id="search">
+            <button type="submit" class="bouton">Rechercher !</button>
         </form>
     </div>
 </section>

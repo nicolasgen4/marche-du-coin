@@ -17,15 +17,15 @@
 <body>
 
     <header id="header-nav" class="column-btw-center">
-        <x-vente-nav :nav/>
-        <x-vente-hero :hero/>
+        <x-vente-nav :nav />
+        @include('partials._hero')
     </header>
     <main class="wrapper column-center">
         <!--Affichage des vues-->
         {{$slot}}
     </main>
     <footer>
-        <x-vente-footer :footer/>
+        <x-vente-footer :footer />
     </footer>
 
 </body>

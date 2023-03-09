@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\VentesController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Ventes;
 
@@ -15,15 +16,13 @@ use App\Models\Ventes;
 */
 
 //Toutes les ventes
-Route::get('/', function () {
-    return view('ventes', [
-        'ventes' => Ventes::all()
-    ]);
-});
+Route::get('/', [VentesController::class, 'index']);
+
+//Formulaire de création
+Route::get('/ventes/create', [VentesController::class, 'create']);
+
+//Stockage d'une vente
+Route::post('/ventes', [VentesController::class, 'store']);
 
 //Une seule vente
-Route::get('/ventes/{vente}', function (Ventes $vente) {
-    return view('vente', [
-        'vente' => $vente
-    ]);
-});
+Route::get('/ventes/{vente}', [VentesController::class, 'show']);

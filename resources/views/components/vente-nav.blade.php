@@ -13,7 +13,7 @@
     </a>
     <ul class="menu row-center">
         <li>Vous êtes un producteur du Rouillacais ?</li>
-        <li><a href="/" class="bouton">Vendre mes produits</a></li>
+        <li><a href="/ventes/create" class="bouton">Vendre mes produits</a></li>
         <li><a href="/" class="bouton">Gérer mes annonces</a></li>
     </ul>
 </nav>

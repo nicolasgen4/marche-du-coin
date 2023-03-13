@@ -3,5 +3,5 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur a aliquam cum voluptate corporis!
         Et, optio! Debitis praesentium doloribus, earum incidunt porro labore veniam exercitationem a quos rem,
         ipsam iste.</p>
-    <x-vente-search :search />
+    <x-vente-search/>
 </section>

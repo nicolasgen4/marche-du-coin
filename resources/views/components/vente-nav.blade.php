@@ -1,5 +1,3 @@
-@props(['nav'])
-
 <nav class="main-menu row-btw">
     <a href="/" class="logo">
         <figure class="row-center">

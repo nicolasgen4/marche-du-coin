@@ -9,6 +9,20 @@ class Ventes extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'image',
+        'titre',
+        'etiquettes',
+        'vendeur',
+        'debut_vente',
+        'fin_vente',
+        'localisation',
+        'email',
+        'telephone',
+        'site_web',
+        'description'
+    ];
+
     public function scopeFilter($query, array $filters)
     {
         if ($filters['tag'] ?? false) {
@@ -25,26 +39,26 @@ class Ventes extends Model
                 'like',
                 '%' . request('search') . '%'
             )
-            ->orWhere(
-                'etiquettes',
-                'like',
-                '%' . request('search') . '%'
-            )
-            ->orWhere(
-                'description',
-                'like',
-                '%' . request('search') . '%'
-            )
-            ->orWhere(
-                'vendeur',
-                'like',
-                '%' . request('search') . '%'
-            )
-            ->orWhere(
-                'localisation',
-                'like',
-                '%' . request('search') . '%'
-            );
+                ->orWhere(
+                    'etiquettes',
+                    'like',
+                    '%' . request('search') . '%'
+                )
+                ->orWhere(
+                    'description',
+                    'like',
+                    '%' . request('search') . '%'
+                )
+                ->orWhere(
+                    'vendeur',
+                    'like',
+                    '%' . request('search') . '%'
+                )
+                ->orWhere(
+                    'localisation',
+                    'like',
+                    '%' . request('search') . '%'
+                );
         }
     }
 }

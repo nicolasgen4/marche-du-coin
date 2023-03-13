@@ -39,16 +39,21 @@ class VentesController extends Controller
     public function store(Request $request)
     {
         $formFields = $request->validate([
+            'image' => 'required',
             'titre' => ['required', Rule::unique('ventes', 'titre')],
-            'tags' => 'required',
+            'etiquettes' => 'required',
             'vendeur' => 'required',
+            'debut_vente' => 'required',
+            'fin_vente' => 'required',
             'localisation' => 'required',
             'email' => ['required', 'email'],
+            'telephone' => 'required',
+            'site_web' => 'required',
             'description' => 'required'
         ]);
 
         Ventes::create($formFields);
 
-        return redirect('/');
+        return redirect('/')->with('message', 'Nouvelle annonce créée avec succès !');
     }
 }

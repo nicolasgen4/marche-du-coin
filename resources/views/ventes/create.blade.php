@@ -69,7 +69,7 @@
             <div class="field column-btw">
                 <label for="site_web">Site Web</label>
                 <input type="url" name="site_web" id="site_web" value="{{old('site_web')}}">
-                @error('siteweb')
+                @error('site_web')
                 <p>{{$message}}</p>
                 @enderror
             </div>

@@ -17,7 +17,7 @@ class VentesController extends Controller
                     'tag',
                     'search'
                 ])
-            )->get()
+            )->paginate(2)
         ]);
     }
 

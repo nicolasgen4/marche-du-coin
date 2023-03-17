@@ -77,3 +77,9 @@ main>.article>h2 {
     padding: 0.2rem;
     border-radius: 0.2rem;
 }
+
+/*PAGINATION*/
+.btn-pagination {
+    width: 2rem;
+    height: 2rem;
+}

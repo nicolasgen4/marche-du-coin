@@ -17,7 +17,7 @@ class VentesController extends Controller
                     'tag',
                     'search'
                 ])
-            )->paginate(2)
+            )->paginate(6)
         ]);
     }
 
@@ -44,11 +44,8 @@ class VentesController extends Controller
             'etiquettes' => 'required',
             'vendeur' => 'required',
             'debut_vente' => 'required',
-            'fin_vente' => 'required',
             'localisation' => 'required',
             'email' => ['required', 'email'],
-            'telephone' => 'required',
-            'site_web' => 'required',
             'description' => 'required'
         ]);
 

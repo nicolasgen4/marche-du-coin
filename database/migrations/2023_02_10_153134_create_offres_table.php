@@ -16,15 +16,15 @@ return new class extends Migration
         Schema::create('ventes', function (Blueprint $table) {
             $table->id();
             $table->string('image');
-            $table->string('titre');
+            $table->string('titre')->unique();
             $table->string('etiquettes');
             $table->string('vendeur');
             $table->string('debut_vente');
-            $table->string('fin_vente');
+            $table->string('fin_vente')->nullable();
             $table->string('localisation');
             $table->string('email');
-            $table->string('telephone');
-            $table->string('site_web');
+            $table->string('telephone')->nullable();
+            $table->string('site_web')->nullable();
             $table->longText('description');
             $table->timestamps();
         });

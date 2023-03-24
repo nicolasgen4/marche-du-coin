@@ -16,7 +16,7 @@
     @endunless
 
 
-    {{$ventes->links()}}
+    {{$ventes->onEachSide(2)->links()}}
 
 
 </x-layout>

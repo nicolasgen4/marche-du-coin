@@ -50,21 +50,6 @@ main>.items>.item {
     font-weight: 700;
 }
 
-/*VENTE ARTICLE*/
-main>.article {
-    max-width: var(--section-wrapper);
-    margin: 3.2rem auto;
-    gap: 2rem;
-    background-color: var(--couleur-articles);
-    padding: 2rem;
-    box-shadow: var(--ombre);
-}
-
-main>.article>img,
-main>.article>h2 {
-    align-self: center;
-}
-
 /*TAGS*/
 .tags {
     gap: 0.8rem;
@@ -78,31 +63,48 @@ main>.article>h2 {
     border-radius: 0.2rem;
 }
 
-/*PAGINATION*/
-nav.pagination {
-    width: 100%;
-}
-
-ul.pagination-links {
-    gap: 0.4rem;
-}
-
-ul.pagination-links>li:not(:first-child, :last-child) a {
-    display: block;
-    border: 2px var(--couleur-cta) solid;
-    border-radius: 0.2rem;
-    font-weight: 700;
-    padding: 0.6rem 0.8rem;
+/*MESSAGES*/
+p.message {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 320px;
+    padding: 1rem 2rem;
+    background-color: var(--couleur-cta);
+    border: 0.2rem solid var(--couleur-secondaire);
+    border-radius: 1.2rem;
     box-shadow: var(--ombre);
 }
 
-ul.pagination-links #current-page {
-    display: block;
-    padding: 0.6rem 0.8rem;
+p.erreur {
+    color: red;
 }
 
-.btn-pagination {
-    width: 2.6rem;
-    height: 2.6rem;
-    fill: var(--couleur-cta);
+/*FORMULAIRES*/
+section.formulaire {
+    max-width: var(--section-wrapper);
+    margin: 3.2rem auto;
+    gap: 2rem;
+    background-color: var(--couleur-articles);
+    padding: 2rem 4rem;
+    box-shadow: var(--ombre);
+}
+
+section.formulaire form {
+    gap: 0.8rem;
+}
+
+section.formulaire div.champ {
+    gap: 0.2rem;
+}
+
+section.formulaire div.champ input,
+section.formulaire div.champ textarea {
+    width: 100%;
+}
+
+section.formulaire div.champ input:focus,
+section.formulaire div.champ textarea:focus {
+    outline: 0.2rem solid var(--couleur-cta);
 }

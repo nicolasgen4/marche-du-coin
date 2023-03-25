@@ -37,6 +37,51 @@ body>#header-nav {
     font-weight: 700;
 }
 
+/*ARTICLE SEUL*/
+main>.article {
+    max-width: var(--section-wrapper);
+    margin: 3.2rem auto;
+    gap: 2rem;
+    background-color: var(--couleur-articles);
+    padding: 2rem;
+    box-shadow: var(--ombre);
+}
+
+main>.article>img,
+main>.article>h2 {
+    align-self: center;
+}
+
+/*PAGINATION*/
+nav.pagination {
+    width: 100%;
+}
+
+ul.pagination-links {
+    gap: 0.4rem;
+}
+
+ul.pagination-links>li:not(:first-child, :last-child) a {
+    display: block;
+    border: 2px var(--couleur-cta) solid;
+    border-radius: 0.2rem;
+    font-weight: 700;
+    padding: 0.6rem 0.8rem;
+    background-color: var(--couleur-articles);
+    box-shadow: var(--ombre);
+}
+
+ul.pagination-links #current-page {
+    display: block;
+    padding: 0.6rem 0.8rem;
+}
+
+.btn-pagination {
+    width: 2.6rem;
+    height: 2.6rem;
+    fill: var(--couleur-cta);
+}
+
 /*FOOTER*/
 footer {
     width: 100%;

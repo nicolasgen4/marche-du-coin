@@ -32,12 +32,13 @@
 
         {{-- Liens de pagination --}}
         @foreach ($elements as $element)
-        {{-- "Three Dots" Separator --}}
+        {{-- Séparateur (3 points) --}}
         @if (is_string($element))
         <li aria-disabled="true">
             <span>{{ $element }}</span>
         </li>
         @endif
+        {{-- Liens des pages --}}
         @if (is_array($element))
         @foreach ($element as $page => $url)
         @if ($page == $paginator->currentPage())

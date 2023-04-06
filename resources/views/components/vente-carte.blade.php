@@ -1,7 +1,8 @@
 @props(['vente'])
 
 <section class="item column-btw-center">
-    <img src="images/{{$vente->image}}" alt="{{$vente->titre}}" loading="lazy">
+    <img src="{{$vente->image ? asset('storage/' . $vente->image) : asset('/images/default.webp')}}" alt="{{$vente->titre}}"
+        loading="lazy">
     <h2>{{mb_strimwidth(ucfirst($vente->titre), 0, 60, '...')}}</h2>
     <section class="informations column-btw">
         <h3>Début : {{$vente->debut_vente}}</h3>

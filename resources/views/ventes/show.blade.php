@@ -1,7 +1,7 @@
 <x-layout>
 
 <article class="article column-btw">
-    <img src="{{asset('images')}}/{{$vente->image}}" alt="{{$vente->titre}}">
+    <img src="{{$vente->image ? asset('storage/' . $vente->image) : asset('/images/default.webp')}}" alt="{{$vente->titre}}">
     <h2>{{$vente->titre}}</h2>
     <article class="informations column-btw">
         <h3><span class="information">Vendeur :</span> {{$vente->vendeur}}</h3>

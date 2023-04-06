@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('ventes', function (Blueprint $table) {
             $table->id();
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->string('titre')->unique();
             $table->string('etiquettes');
             $table->string('vendeur');

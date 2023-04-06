@@ -39,7 +39,6 @@ class VentesController extends Controller
     public function store(Request $request)
     {
         $formFields = $request->validate([
-            'image' => 'required',
             'titre' => ['required', Rule::unique('ventes', 'titre')],
             'etiquettes' => 'required',
             'vendeur' => 'required',
@@ -48,6 +47,10 @@ class VentesController extends Controller
             'email' => ['required', 'email'],
             'description' => 'required'
         ]);
+
+        if ($request->hasFile('image')) {
+            $formFields['image'] = $request->file('image')->store('ventes', 'public');
+        }
 
         Ventes::create($formFields);
 

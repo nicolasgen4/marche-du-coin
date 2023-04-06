@@ -1,11 +1,11 @@
 <x-layout>
     <section class="column-center formulaire">
         <h2>Enregistrer une vente</h2>
-        <form action="/ventes" method="POST" class="column-btw">
+        <form action="/ventes" method="post" enctype="multipart/form-data" class="column-btw">
             @csrf
             <div class="champ column-btw">
                 <label for="image">Image</label>
-                <input type="text" name="image" id="image" value="{{old('image')}}">
+                <input type="file" name="image" id="image" accept=".jpg, .png, .gif, .webp">
                 @error('image')
                 <p class="erreur">{{$message}}</p>
                 @enderror

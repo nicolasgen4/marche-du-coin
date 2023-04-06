@@ -17,7 +17,7 @@ class VentesFactory extends Factory
     public function definition()
     {
         return [
-            'image' => 'test.webp',
+            'image' => '',
             'titre' => $this->faker->sentence(),
             'etiquettes' => 'patates,pommes,carottes',
             'vendeur' => $this->faker->company(),

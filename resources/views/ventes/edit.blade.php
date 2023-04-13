@@ -2,7 +2,7 @@
     <section class="column-center formulaire">
         <h2>Modifier une annonce</h2>
         <p>{{$vente->titre}}</p>
-        <form action="/ventes/{{$vente->id}}" method="post" enctype="multipart/form-data" class="column-btw">
+        <form action="/ventes/{{$vente->id}}" method="POST" enctype="multipart/form-data" class="column-btw">
             @csrf
             @method('PUT')
             <div class="champ row-btw">

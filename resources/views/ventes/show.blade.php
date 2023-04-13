@@ -20,6 +20,10 @@
             <li><span class="information">Site Web :</span> {{$vente->site_web}}</li>
         </ul>
     </article>
+    <section class="informations column-btw">
+        <h6 class="information">Gérer l'annonce</h6>
+        <a href="/ventes/{{$vente->id}}/edit">Modifier</a>
+    </section>
 </article>
 
 </x-layout>

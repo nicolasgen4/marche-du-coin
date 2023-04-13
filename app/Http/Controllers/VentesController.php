@@ -56,4 +56,32 @@ class VentesController extends Controller
 
         return redirect('/')->with('message', 'Nouvelle annonce créée avec succès !');
     }
+
+    //Affiche le formulaire de modification
+    public function edit(Ventes $vente)
+    {
+        return view('ventes.edit', ['vente' => $vente]);
+    }
+
+    //Modifie une vente
+    public function update(Request $request, Ventes $vente)
+    {
+        $formFields = $request->validate([
+            'titre' => 'required',
+            'etiquettes' => 'required',
+            'vendeur' => 'required',
+            'debut_vente' => 'required',
+            'localisation' => 'required',
+            'email' => ['required', 'email'],
+            'description' => 'required'
+        ]);
+
+        if ($request->hasFile('image')) {
+            $formFields['image'] = $request->file('image')->store('ventes', 'public');
+        }
+
+        $vente->update($formFields);
+
+        return back()->with('message', 'Annonce modifiée avec succès !');
+    }
 }

@@ -29,5 +29,8 @@ Route::get('ventes/{vente}/edit', [VentesController::class, 'edit']);
 //Envoyer une vente modifiée
 Route::put('ventes/{vente}', [VentesController::class, 'update']);
 
+//Supprimer une vente
+Route::delete('ventes/{vente}', [VentesController::class, 'destroy']);
+
 //Une seule vente
 Route::get('/ventes/{vente}', [VentesController::class, 'show']);

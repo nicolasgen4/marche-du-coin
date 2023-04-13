@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\VentesController;
 use Illuminate\Support\Facades\Route;
-use App\Models\Ventes;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +22,12 @@ Route::get('/ventes/create', [VentesController::class, 'create']);
 
 //Stockage d'une vente
 Route::post('/ventes', [VentesController::class, 'store']);
+
+//Formulaire de modification
+Route::get('ventes/{vente}/edit', [VentesController::class, 'edit']);
+
+//Envoyer une vente modifiée
+Route::put('ventes/{vente}', [VentesController::class, 'update']);
 
 //Une seule vente
 Route::get('/ventes/{vente}', [VentesController::class, 'show']);

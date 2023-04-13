@@ -84,4 +84,11 @@ class VentesController extends Controller
 
         return back()->with('message', 'Annonce modifiée avec succès !');
     }
+
+    //Supprimer une vente
+    public function destroy(Ventes $vente)
+    {
+        $vente->delete();
+        return redirect('/')->with('message', 'Annonce supprimée avec succès !');
+    }
 }

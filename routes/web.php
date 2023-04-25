@@ -15,38 +15,38 @@ use App\Http\Controllers\VentesController;
 |
 */
 
-//Toutes les ventes
+//Afficher toutes les ventes
 Route::get('/', [VentesController::class, 'index']);
 
-//Formulaire de création
-Route::get('/ventes/create', [VentesController::class, 'create']);
+//Afficher formulaire de création de vente
+Route::get('/ventes/create', [VentesController::class, 'create'])->middleware('auth');
 
-//Créer une vente
-Route::post('/ventes', [VentesController::class, 'store']);
+//Enregistrer une vente
+Route::post('/ventes', [VentesController::class, 'store'])->middleware('auth');
 
-//Formulaire de modification
-Route::get('ventes/{vente}/edit', [VentesController::class, 'edit']);
+//Afficher formulaire de modification
+Route::get('ventes/{vente}/edit', [VentesController::class, 'edit'])->middleware('auth');
 
-//Envoyer une vente modifiée
-Route::put('ventes/{vente}', [VentesController::class, 'update']);
+//Enregistrer une vente modifiée
+Route::put('ventes/{vente}', [VentesController::class, 'update'])->middleware('auth');
 
 //Supprimer une vente
-Route::delete('ventes/{vente}', [VentesController::class, 'destroy']);
+Route::delete('ventes/{vente}', [VentesController::class, 'destroy'])->middleware('auth');
 
-//Une seule vente
+//Afficher une seule vente
 Route::get('/ventes/{vente}', [VentesController::class, 'show']);
 
-//Formulaire d'enregistrement
-Route::get('/register', [UserController::class, 'create']);
+//Afficher formulaire d'enregistrement
+Route::get('/register', [UserController::class, 'create'])->middleware('guest');
 
-//Créer un utilisateur
-Route::post('/users', [UserController::class, 'store']);
+//Enregistrer un utilisateur
+Route::post('/users', [UserController::class, 'store'])->middleware('guest');
 
-//Déconnecter un utilisateur
-Route::post('/logout', [UserController::class, 'logout']);
+//Déconnexion de utilisateur
+Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 
-//Formulaire de connexion
-Route::get('/login', [UserController::class, 'login']);
+//Afficher formulaire de connexion
+Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
 
-//Connecter un utilisateur
-Route::post('users/authenticate', [UserController::class, 'authenticate']);
+//Connecter l'utilisateur
+Route::post('users/authenticate', [UserController::class, 'authenticate'])->middleware('guest');

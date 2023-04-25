@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\VentesController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\VentesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +21,7 @@ Route::get('/', [VentesController::class, 'index']);
 //Formulaire de création
 Route::get('/ventes/create', [VentesController::class, 'create']);
 
-//Stockage d'une vente
+//Créer une vente
 Route::post('/ventes', [VentesController::class, 'store']);
 
 //Formulaire de modification
@@ -34,3 +35,9 @@ Route::delete('ventes/{vente}', [VentesController::class, 'destroy']);
 
 //Une seule vente
 Route::get('/ventes/{vente}', [VentesController::class, 'show']);
+
+//Formulaire de connexion
+Route::get('/register', [UserController::class, 'create']);
+
+//Créer un utilisateur
+Route::post('/users', [UserController::class, 'store']);

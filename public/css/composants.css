@@ -16,6 +16,7 @@
 /*BOUTONS*/
 .bouton {
     display: inline-block;
+    max-width: fit-content;
     padding: 0.6rem;
     margin: 0.4rem 0;
     font-weight: 700;

@@ -61,4 +61,10 @@ class Ventes extends Model
                 );
         }
     }
+
+    //Relation avec les utilisateurs
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

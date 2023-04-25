@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('ventes', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('image')->nullable();
             $table->string('titre')->unique();
             $table->string('etiquettes');

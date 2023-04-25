@@ -36,7 +36,7 @@ Route::delete('ventes/{vente}', [VentesController::class, 'destroy']);
 //Une seule vente
 Route::get('/ventes/{vente}', [VentesController::class, 'show']);
 
-//Formulaire de connexion
+//Formulaire d'enregistrement
 Route::get('/register', [UserController::class, 'create']);
 
 //Créer un utilisateur
@@ -44,3 +44,9 @@ Route::post('/users', [UserController::class, 'store']);
 
 //Déconnecter un utilisateur
 Route::post('/logout', [UserController::class, 'logout']);
+
+//Formulaire de connexion
+Route::get('/login', [UserController::class, 'login']);
+
+//Connecter un utilisateur
+Route::post('users/authenticate', [UserController::class, 'authenticate']);

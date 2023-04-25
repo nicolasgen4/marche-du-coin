@@ -22,7 +22,7 @@
         @else
         <li>Vous êtes un producteur du Rouillacais ?</li>
         <li><a href="/register" class="bouton">Créer un compte</a></li>
-        <li><a href="/login" class="bouton">Connexion</a></li>
+        <li><a href="/login" class="bouton">Se connecter</a></li>
         @endauth
     </ul>
 </nav>

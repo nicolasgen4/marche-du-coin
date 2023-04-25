@@ -10,8 +10,19 @@
         </figure>
     </a>
     <ul class="menu row-center">
+        @auth
+        <li>Bienvenue {{auth()->user()->name}}</li>
+        <li><a href="/ventes/manage" class="bouton">Gérer mes annonces</a></li>
+        <li>
+            <form action="/logout" method="post">
+                @csrf
+                <button class="bouton" type="submit">Déconnexion</button>
+            </form>
+        </li>
+        @else
         <li>Vous êtes un producteur du Rouillacais ?</li>
-        <li><a href="/register" class="bouton">Vendre mes produits</a></li>
-        <li><a href="/login" class="bouton">Gérer mes annonces</a></li>
+        <li><a href="/register" class="bouton">Créer un compte</a></li>
+        <li><a href="/login" class="bouton">Connexion</a></li>
+        @endauth
     </ul>
 </nav>

@@ -35,4 +35,15 @@ class UserController extends Controller
 
         return redirect('/')->with('message', 'Utilisateur créé avec succès');
     }
+
+    //Déconnecter un utilisateur
+    public function logout(Request $request)
+    {
+        auth()->logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/')->with('message', 'Vous avez été déconnecté(e) avec succès !');
+    }
 }

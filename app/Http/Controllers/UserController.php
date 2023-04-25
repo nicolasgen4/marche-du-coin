@@ -46,4 +46,27 @@ class UserController extends Controller
 
         return redirect('/')->with('message', 'Vous avez été déconnecté(e) avec succès !');
     }
+
+    //Affiche le formulaire de connexion
+    public function login()
+    {
+        return view('users.login');
+    }
+
+    //Connecter un utilisateur
+    public function authenticate(Request $request)
+    {
+        $formFields = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => 'required'
+        ]);
+
+        if (auth()->attempt($formFields)) {
+            $request->session()->regenerate();
+
+            return redirect('/')->with('message', 'Vous êtes désormais connecté(e)');
+        }
+
+        return back()->withErrors(['email' => 'Les identifiants ne correspondent pas'])->onlyInput('email');
+    }
 }

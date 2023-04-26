@@ -33,6 +33,9 @@ Route::put('ventes/{vente}', [VentesController::class, 'update'])->middleware('a
 //Supprimer une vente
 Route::delete('ventes/{vente}', [VentesController::class, 'destroy'])->middleware('auth');
 
+//Gérer ses ventes
+Route::get('ventes/manage', [VentesController::class, 'manage'])->middleware('auth');
+
 //Afficher une seule vente
 Route::get('/ventes/{vente}', [VentesController::class, 'show']);
 

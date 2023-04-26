@@ -22,6 +22,7 @@
                 <li><span class="information">Site Web :</span> {{$vente->site_web}}</li>
             </ul>
         </article>
+        @if (auth()->id() === $vente->user_id)
         <section class="informations column-btw">
             <h6 class="information">Gérer l'annonce</h6>
             <a href="/ventes/{{$vente->id}}/edit" class="bouton">Modifier</a>
@@ -31,6 +32,7 @@
                 <button class="bouton">Supprimer</button>
             </form>
         </section>
+        @endif
     </article>
 
 </x-layout>

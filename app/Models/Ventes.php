@@ -10,6 +10,7 @@ class Ventes extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
         'image',
         'titre',
         'etiquettes',

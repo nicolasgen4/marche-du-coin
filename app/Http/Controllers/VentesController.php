@@ -52,6 +52,8 @@ class VentesController extends Controller
             $formFields['image'] = $request->file('image')->store('ventes', 'public');
         }
 
+        $formFields['user_id'] = auth()->id();
+
         Ventes::create($formFields);
 
         return redirect('/')->with('message', 'Nouvelle annonce créée avec succès !');

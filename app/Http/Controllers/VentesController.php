@@ -68,6 +68,11 @@ class VentesController extends Controller
     //Modifie une vente
     public function update(Request $request, Ventes $vente)
     {
+        //Vérifie la connexion de l'utilisateur
+        if ($vente->user_id != auth()->id()) {
+            abort(403, 'Action non autorisée');
+        }
+
         $formFields = $request->validate([
             'titre' => 'required',
             'etiquettes' => 'required',
@@ -90,7 +95,18 @@ class VentesController extends Controller
     //Supprimer une vente
     public function destroy(Ventes $vente)
     {
+        //Vérifie la connexion de l'utilisateur
+        if ($vente->user_id != auth()->id()) {
+            abort(403, 'Action non autorisée');
+        }
+
         $vente->delete();
         return redirect('/')->with('message', 'Annonce supprimée avec succès !');
+    }
+
+    //Gérer ses ventes
+    public function manage()
+    {
+        return view('ventes.manage', ['ventes' => auth()->user()->ventes()->get()]);
     }
 }

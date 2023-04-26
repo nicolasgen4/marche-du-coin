@@ -1,2 +1,2 @@
 # marche-du-coin
-Une plateforme développée avec Laravel qui permettra à terme de déposer/modifier/supprimer/afficher des ventes de produits locaux
+Une plateforme développée avec Laravel qui offre un système de compte utilisateurs pour créer, modifier, supprimer et afficher des annonces de vente de proximité.
